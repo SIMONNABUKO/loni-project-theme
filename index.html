@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./custom.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid bg-green">
+      <header class="d-flex justify-content-between align-items-center">
+        <a href="#" class="nav-link logo">365</a>
+        <nav class="top-nav">
+          <ul class="d-flex justify-content-center align-items-center">
+            <li class="nav-item"><a href="#" class="nav-link">Sports</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Live Bet</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Casino</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">My Bets</a></li>
+          </ul>
+        </nav>
+        <nav class="bottom-nav">
+          <div class="row">
+            <div class="col-md-8">
+              <ul class="d-flex justify-content-center align-items-center">
+                <li class="nav-item">
+                  <a href="#" class="nav-link muted">username</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link muted"
+                    ><i class="fa fa-envelope"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link muted"
+                    ><i class="fa fa-bell"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-4">
+              <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-6">
+                  <a href="#" class="nav-link muted">€10000</a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="nav-link muted user-profile" id="user-profile"
+                    ><i class="fa fa-user-circle"></i
+                  ></a>
+                  <section id="account-popup">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-12 p-2 border border-light">
+                          <p>username</p>
+
+                          <div class="d-flex justify-content-start">
+                            <p class="px-3">0 €</p>
+                            <a class="px-3 account__popuplink" href="#">
+                              <i class="fa fa-eye"></i
+                            ></a>
+                            <a class="px-3 account__popuplink" href="#"
+                              ><i class="fa fa-refresh"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="col-md-12 mb-2 d-flex justify-content-between p-2 border border-light"
+                        >
+                          <a href="#" class="account__popuplink active" id="account__link">My Account</a>
+
+                          <a href="#" class="account__popuplink" id="settings__icon"
+                            ><i class="fa fa-cog"></i
+                          ></a>
+                        </div>
+                        <div class="col-md-12" id="account__settings">
+                          <div class="account border-bottom">
+                            <a
+                              href="#"
+                              class="d-flex justify-content-between account__popuplink"
+                            >
+                              <p>Messages</p>
+                              <i class="fa fa-envelope"></i>
+                            </a>
+                          </div>
+                          
+                          <div class="account border-bottom py-2">
+                            <div
+                              class="accordion accordion-flush"
+                              id="accordionFlushExample"
+                            >
+                              <div
+                                class="accordion-item"
+                                style="background: #979797"
+                              >
+                                <h2
+                                  class="accordion-header"
+                                  id="flush-headingZero"
+                                >
+                                  <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseZero"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseZero"
+                                    style="background: #d3d3d3"
+                                    
+                                  >
+                                    History
+                                  </button>
+                                </h2>
+                                <div
+                                  id="flush-collapseZero"
+                                  class="accordion-collapse collapse"
+                                  aria-labelledby="flush-headingZero"
+                                  data-bs-parent="#accordionFlushExample"
+                                >
+                                  <div class="accordion-body">
+                                    <ul
+                                      class="list-group list-group-flush"
+                                      style="background: #979797"
+                                    >
+                                      <li
+                                        class="list-group-item"
+                                        style="background: #979797"
+                                      >
+                                        <a
+                                          href="#"
+                                          class="settings__accordionlink"
+                                          >My Bets</a
+                                        >
+                                      </li>
+                                      <li
+                                        class="list-group-item"
+                                        style="background: #979797"
+                                      >
+                                        <a
+                                          href="#"
+                                          class="settings__accordionlink"
+                                          >Games</a
+                                        >
+                                      </li>
+                                      
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="account border-bottom py-2">
+                            <a href="#" class="btn btn-block account__popuplink "> Logout </a>
+                          </div>
+                        </div>
+                        <div class="col-md-12" id="settings__accordion">
+                          <div
+                            class="accordion accordion-flush"
+                            id="accordionFlushExample"
+                          >
+                            <div
+                              class="accordion-item"
+                              style="background: #979797"
+                            >
+                              <h2
+                                class="accordion-header"
+                                id="flush-headingOne"
+                              >
+                                <button
+                                  class="accordion-button collapsed"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseOne"
+                                  aria-expanded="false"
+                                  aria-controls="flush-collapseOne"
+                                  style="background: #d3d3d3"
+                                >
+                                  Account
+                                </button>
+                              </h2>
+                              <div
+                                id="flush-collapseOne"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne"
+                                data-bs-parent="#accordionFlushExample"
+                              >
+                                <div class="accordion-body">
+                                  <ul
+                                    class="list-group list-group-flush"
+                                    style="background: #979797"
+                                  >
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Preferences</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Change Password</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Two-factor authentication</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              class="accordion-item"
+                              style="background: #979797"
+                            >
+                              <h2
+                                class="accordion-header"
+                                id="flush-headingTwo"
+                              >
+                                <button
+                                  class="accordion-button collapsed"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseTwo"
+                                  aria-expanded="false"
+                                  aria-controls="flush-collapseTwo"
+                                  style="background: #d3d3d3"
+                                >
+                                  Language
+                                </button>
+                              </h2>
+                              <div
+                                id="flush-collapseTwo"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo"
+                                data-bs-parent="#accordionFlushExample"
+                              >
+                                <div class="accordion-body">
+                                  <ul
+                                    class="list-group list-group-flush"
+                                    style="background: #979797"
+                                  >
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >English</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Francas</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Deutsh</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Shqip</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Espanol</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              class="accordion-item"
+                              style="background: #979797"
+                            >
+                              <h2
+                                class="accordion-header"
+                                id="flush-headingThree"
+                              >
+                                <button
+                                  class="accordion-button collapsed"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseThree"
+                                  aria-expanded="false"
+                                  aria-controls="flush-collapseThree"
+                                  style="background: #d3d3d3"
+                                >
+                                  Time Zone
+                                </button>
+                              </h2>
+                              <div
+                                id="flush-collapseThree"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree"
+                                data-bs-parent="#accordionFlushExample"
+                              >
+                                <div class="accordion-body">
+                                  <ul
+                                    class="list-group list-group-flush"
+                                    style="background: #979797"
+                                  >
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Atlantic Standard Time (AST)</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Eastern Standard Time (EST)</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Central Standard Time (CST)</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Mountain Standard Time (MST)</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Pacific Standard Time (PST)</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="accordion-item"
+                              style="background: #979797"
+                            >
+                              <h2
+                                class="accordion-header"
+                                id="flush-headingThree"
+                              >
+                                <button
+                                  class="accordion-button collapsed"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseFour"
+                                  aria-expanded="false"
+                                  aria-controls="flush-collapseThree"
+                                  style="background: #d3d3d3"
+                                >
+                                  Odd Format
+                                </button>
+                              </h2>
+                              <div
+                                id="flush-collapseFour"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour"
+                                data-bs-parent="#accordionFlushExample"
+                              >
+                                <div class="accordion-body">
+                                  <ul
+                                    class="list-group list-group-flush"
+                                    style="background: #979797"
+                                  >
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Decimal</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="accordion-item"
+                              style="background: #979797"
+                            >
+                              <h2
+                                class="accordion-header"
+                                id="flush-headingFive"
+                              >
+                                <button
+                                  class="accordion-button collapsed"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseFive"
+                                  aria-expanded="false"
+                                  aria-controls="flush-collapseFive"
+                                  style="background: #d3d3d3"
+                                >
+                                  Accept Odds
+                                </button>
+                              </h2>
+                              <div
+                                id="flush-collapseFive"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFive"
+                                data-bs-parent="#accordionFlushExample"
+                              >
+                                <div class="accordion-body">
+                                  <ul
+                                    class="list-group list-group-flush"
+                                    style="background: #979797"
+                                  >
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Any</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >Greater</a
+                                      >
+                                    </li>
+                                    <li
+                                      class="list-group-item"
+                                      style="background: #979797"
+                                    >
+                                      <a
+                                        href="#"
+                                        class="settings__accordionlink"
+                                        >None</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="row d-flex align-items-center bottom__nav__section">
+        <div class="col-md-6">
+          <form class="form-inline">
+            <div class="search-box">
+              <button class="btn-search"><i class="fas fa-search"></i></button>
+              <input type="text" class="input-search" placeholder="Search..." />
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="search-nav lh-sm" id="myTopnav">
+            <nav class="bottom__nav">
+              <ul class="nav__list d-flex justify-content-around">
+                <li class="nav__listitem">
+                  <a href="#" class="nav-link accounting">Accounting</a>
+                  <ul class="nav__listdropdown">
+                    <li class="nav__listdropdownitem">
+                      <a href="#" class="nav-link">My Bets</a>
+                    </li>
+                    <li class="nav__listdropdownitem">
+                      <a href="#" class="nav-link">Messages</a>
+                    </li>
+                    <li class="nav__listdropdownitem">
+                      <a href="preferences.html" class="nav-link">My Account</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__listitem">
+                  <a href="#" class="nav-link">Help</a>
+                </li>
+                <li class="nav__listitem">
+                  <a href="#" class="nav-link" id="lang__dropdown">Language</a>
+                  <ul class="nav__listdropdownlanguage">
+                    <li class="nav__listdropdownitem">
+                      <a href="#" class="nav-link">English</a>
+                    </li>
+                    <li class="nav__listdropdownitem">
+                      <a href="#" class="nav-link">Francas</a>
+                    </li>
+                    <li class="nav__listdropdownitem">
+                      <a href="#" class="nav-link">Deutsh</a>
+                    </li>
+                    <li class="nav__listdropdownitem">
+                      <a href="#" class="nav-link">Shqip</a>
+                    </li>
+                    <li class="nav__listdropdownitem">
+                      <a href="#" class="nav-link">Espanol</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__listitem">
+                  <a href="#" class="nav-link" id="odds__dropdown">Odds</a>
+                  <ul class="nav__listdropdownodds">
+                    <li class="nav__listdropdownitem">
+                      <a href="#" class="nav-link">Decimal Odds</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__listitem">
+                  <a href="#" class="nav-link">10:35:24 (+03:00)</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <div class="clear"></div>
+
+      <!--       
+      <div class="row">
+        <div class="slick-slider js-slick">
+          <div
+            class="photo is-animating"
+            style="
+              background-image: url('https://50yo4fzxk02ujr25gm9y.s3.eu-west-1.amazonaws.com/frontpage/871f4f603e350b035c69c34aefc3e37383e9f0ec.jpg');
+              background-position: center center;
+            "
+          ></div>
+
+          <div
+            class="photo"
+            style="
+              background-image: url('https://50yo4fzxk02ujr25gm9y.s3.eu-west-1.amazonaws.com/frontpage/c5a1d167c4b09e40cb7d08186e3ec87cb859c3f4.jpg');
+              background-position: center center;
+            "
+          ></div>
+
+          <div
+            class="photo"
+            style="
+              background-image: url('https://50yo4fzxk02ujr25gm9y.s3.eu-west-1.amazonaws.com/frontpage/9efd46a3e944527c44df8a305f075c4a23deb12f.jpg');
+              background-position: center center;
+            "
+          ></div>
+
+          <div
+            class="photo"
+            style="
+              background-image: url('https://50yo4fzxk02ujr25gm9y.s3.eu-west-1.amazonaws.com/frontpage/56f96185c3de842034d1afd273002f2d0ed7e7a8.jpg');
+              background-position: center center;
+            "
+          ></div>
+          <div
+            class="photo"
+            style="
+              background-image: url('https://50yo4fzxk02ujr25gm9y.s3.eu-west-1.amazonaws.com/frontpage/f3fc663dbb573b084c140815efff44197efc5c00.jpg');
+              background-position: center center;
+            "
+          ></div>
+          <div
+            class="photo"
+            style="
+              background-image: url('https://50yo4fzxk02ujr25gm9y.s3.eu-west-1.amazonaws.com/frontpage/a3f8377af77f093f671c4435198ec5ce50751a4d.jpg');
+              background-position: center center;
+            "
+          ></div>
+        </div>
+      </div> -->
+
+      <div class="row">
+        <div class="footer bg-grey">
+          <ul class="d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Preferences</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">|</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Betting Rules</a>
+            </li>
+          </ul>
+        </div>
+        <div class="copy-right bg-black">
+          <ul class="d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link">copyright 2022 tiptime365.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".js-slick").slick({
+          autoplay: true,
+          autoplaySpeed: 5000,
+          dots: true,
+          draggable: false,
+          fade: true,
+          arrows: false,
+          speed: 1000,
+        });
+
+        $(".js-slick").on(
+          "beforeChange",
+          function (event, slick, currentSlide, nextSlide) {
+            $(slick.$slides).removeClass("is-animating");
+          }
+        );
+
+        $(".js-slick").on(
+          "afterChange",
+          function (event, slick, currentSlide, nextSlide) {
+            $(slick.$slides.get(currentSlide)).addClass("is-animating");
+          }
+        );
+      });
+    </script>
+    <script src="custom.js"></script>
+  </body>
+</html>
